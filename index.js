@@ -5,7 +5,11 @@ const authRoutes = require("./routes/auth");
 const messageRoutes = require("./routes/messages");
 const app = express();
 const socket = require("socket.io");
+
+//const port = process.env.PORT || 3000;
+
 require("dotenv").config();
+
 
 app.use(cors());
 app.use(express.json());
@@ -59,3 +63,10 @@ if(process.env.NODE_ENV == "production"){
     );
   })
 }
+
+
+
+
+//app.listen(port,()=>{
+//  console.log('listening to the port no at ${port}');
+//})
